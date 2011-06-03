@@ -139,5 +139,13 @@
 				<context ref="def:in-comment"/>
 			</include>
 		</context>
+
+		<context id="magma">
+			<include>
+				<context ref="def:string"/>
+				<context ref="line-comment"/>
+				<context ref="multiline-comment"/>
+			</include>
+		</context>
 	</definitions>
 </language>
