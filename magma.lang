@@ -27,4 +27,10 @@
 		<property name="block-comment-start">/*</property>
 		<property name="block-comment-end">*/</property>
 	</metadata>
+	
+	<styles>
+		<style id="comment" _name="Comment" map-to="def:comment"/>
+		<style id="keyword" _name="Keyword" map-to="def:keyword"/>
+		<style id="decimal" _name="Decimal" map-to="def:decimal"/>
+	</styles>
 </language>
