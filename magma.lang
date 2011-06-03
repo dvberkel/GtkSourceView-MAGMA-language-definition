@@ -130,7 +130,7 @@
 			<include>
 				<context ref="def:in-comment"/>
 			</include>
-		</contex>
+		</context>
 
 		<context id="multiline-comment" style-ref="comment">
 			<start>/\*</start>
