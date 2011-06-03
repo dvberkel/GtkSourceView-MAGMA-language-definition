@@ -140,11 +140,17 @@
 			</include>
 		</context>
 
+		<context id="decimal" style-ref="decimal">
+			<match>\b([0-9]*\.)?[0-9]+\b</match>
+		</context>
+
 		<context id="magma">
 			<include>
 				<context ref="def:string"/>
 				<context ref="line-comment"/>
 				<context ref="multiline-comment"/>
+				<context ref="keyword"/>
+				<context ref="decimal"/>
 			</include>
 		</context>
 	</definitions>
