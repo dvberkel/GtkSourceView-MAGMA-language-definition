@@ -29,9 +29,10 @@
 	</metadata>
 	
 	<styles>
-		<style id="comment" _name="Comment" map-to="def:comment"/>
-		<style id="keyword" _name="Keyword" map-to="def:keyword"/>
-		<style id="decimal" _name="Decimal" map-to="def:decimal"/>
+		<style id="comment"  _name="Comment"  map-to="def:comment"/>
+		<style id="keyword"  _name="Keyword"  map-to="def:keyword"/>
+		<style id="decimal"  _name="Decimal"  map-to="def:decimal"/>
+		<style id="function" _name="Function" map-to="def:function"/>
 	</styles>
 	
 	<definitions>
