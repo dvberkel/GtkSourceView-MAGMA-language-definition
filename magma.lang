@@ -144,7 +144,15 @@
 		<context id="decimal" style-ref="decimal">
 			<match>\b([0-9]*\.)?[0-9]+\b</match>
 		</context>
-
+		
+		<context id="function" style-ref="function">
+			<start>\b\w+\(</start>
+			<end>\)</end>
+			<include>
+				<context ref="magma"/>
+			</include>
+		</context>
+		
 		<context id="magma">
 			<include>
 				<context ref="def:string"/>
@@ -152,6 +160,7 @@
 				<context ref="multiline-comment"/>
 				<context ref="keyword"/>
 				<context ref="decimal"/>
+				<context ref="function"/>
 			</include>
 		</context>
 	</definitions>
