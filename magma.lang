@@ -31,6 +31,7 @@
 	<styles>
 		<style id="comment"  _name="Comment"  map-to="def:comment"/>
 		<style id="keyword"  _name="Keyword"  map-to="def:keyword"/>
+		<style id="operator" _name="Operator" map-to="def:operator"/>
 		<style id="function" _name="Function" map-to="def:function"/>
 	</styles>
 	
@@ -140,7 +141,19 @@
 			</include>
 		</context>
 
-		<context id="function" style-ref="function">
+		<define-regex id="operator" extended="true">
+			\! | \~ | \\ | \+ | \- |
+			\* | / | % |
+			\| | \^ | \# |
+			\.\. |
+			\*= | \+= | \-=
+		</define-regex>
+
+		<context id="operator" style-ref="operator">
+			<match>\%{operator}</match>
+		</context>
+
+		<context id="function" style-inside="false" style-ref="function">
 			<start>\b\w+\(</start>
 			<end>\)</end>
 			<include>
@@ -156,6 +169,7 @@
 				<context ref="keyword"/>
 				<context ref="def:decimal"/>
 				<context ref="def:float"/>
+				<context ref="operator"/>
 				<context ref="function"/>
 			</include>
 		</context>
