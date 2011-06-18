@@ -33,6 +33,7 @@
 		<style id="keyword"  _name="Keyword"  map-to="def:keyword"/>
 		<style id="operator" _name="Operator" map-to="def:operator"/>
 		<style id="function" _name="Function" map-to="def:function"/>
+		<style id="identifier" _name="identifier" map-to="def:identifier"/>
 	</styles>
 	
 	<definitions>
@@ -161,6 +162,10 @@
 			</include>
 		</context>
 		
+		<context id="identifier" style-ref="identifier">
+			<match>[a-zA-Z][a-zA-Z0-9_]*</match>
+		</context>
+		
 		<context id="magma">
 			<include>
 				<context ref="def:string"/>
@@ -171,6 +176,7 @@
 				<context ref="def:float"/>
 				<context ref="operator"/>
 				<context ref="function"/>
+				<context ref="identifier"/>
 			</include>
 		</context>
 	</definitions>
