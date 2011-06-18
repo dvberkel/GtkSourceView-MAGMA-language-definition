@@ -31,7 +31,6 @@
 	<styles>
 		<style id="comment"  _name="Comment"  map-to="def:comment"/>
 		<style id="keyword"  _name="Keyword"  map-to="def:keyword"/>
-		<style id="decimal"  _name="Decimal"  map-to="def:decimal"/>
 		<style id="function" _name="Function" map-to="def:function"/>
 	</styles>
 	
@@ -141,10 +140,6 @@
 			</include>
 		</context>
 
-		<context id="decimal" style-ref="decimal">
-			<match>\b([0-9]*\.)?[0-9]+\b</match>
-		</context>
-		
 		<context id="function" style-ref="function">
 			<start>\b\w+\(</start>
 			<end>\)</end>
@@ -159,7 +154,8 @@
 				<context ref="line-comment"/>
 				<context ref="multiline-comment"/>
 				<context ref="keyword"/>
-				<context ref="decimal"/>
+				<context ref="def:decimal"/>
+				<context ref="def:float"/>
 				<context ref="function"/>
 			</include>
 		</context>
