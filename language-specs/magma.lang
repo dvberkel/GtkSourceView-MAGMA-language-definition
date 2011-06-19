@@ -166,8 +166,10 @@
 			</include>
 		</context>
 		
+		<define-regex id="identifier">\%[[a-zA-Z][a-zA-Z0-9_]*</define-regex>
+		
 		<context id="identifier" style-ref="identifier">
-			<match>[a-zA-Z][a-zA-Z0-9_]*</match>
+			<match>\%{identifier}</match>
 		</context>
 		
 		<context id="magma">
