@@ -159,7 +159,7 @@
 		</context>
 
 		<context id="function" style-inside="false" style-ref="function">
-			<start>\b\w+\(</start>
+			<start>\[%\w+\(</start>
 			<end>\)</end>
 			<include>
 				<context ref="magma"/>
