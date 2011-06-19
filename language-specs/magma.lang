@@ -157,16 +157,17 @@
 		<context id="operator" style-ref="operator">
 			<match>\%{operator}</match>
 		</context>
+		
+		<define-regex id="identifier">\%[[a-zA-Z][a-zA-Z0-9_]*</define-regex>
 
-		<context id="function" style-inside="false" style-ref="function">
-			<start>\[%\w+\(</start>
+		<context id="function">
+			<start>(\%{identifier})\(</start>
 			<end>\)</end>
 			<include>
+				<context sub-pattern="1" where="start" style-ref="function"/>
 				<context ref="magma"/>
 			</include>
 		</context>
-		
-		<define-regex id="identifier">\%[[a-zA-Z][a-zA-Z0-9_]*</define-regex>
 		
 		<context id="identifier" style-ref="identifier">
 			<match>\%{identifier}</match>
@@ -182,7 +183,6 @@
 				<context ref="def:float"/>
 				<context ref="operator"/>
 				<context ref="function"/>
-				<context ref="identifier"/>
 			</include>
 		</context>
 	</definitions>
