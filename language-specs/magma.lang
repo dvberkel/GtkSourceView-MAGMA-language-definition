@@ -37,6 +37,95 @@
 	</styles>
 	
 	<definitions>
+		<define-regex id="keyword" extended="true">
+			_ |
+			adj |
+			and |
+			assert |
+			assigned |
+			break |
+			by |
+			case |
+			catch |
+			cat |
+			clear |
+			cmpeq |
+			cmpne |
+			continue |
+			declare |
+			default |
+			delete |
+			diff |
+			div |
+			do |
+			elif |
+			else |
+			end |
+			eq |
+			error |
+			eval |
+			exists |
+			exit |
+			false |
+			for |
+			forall |
+			forward |
+			fprintf |
+			freeze |
+			function |
+			ge |
+			gt |
+			if |
+			iload |
+			import |
+			intrinsic |
+			in |
+			is |
+			join |
+			le |
+			load |
+			local |
+			lt |
+			meet |
+			mod |
+			ne |
+			not |
+			notadj |
+			notin |
+			notsubset |
+			or |
+			printf |
+			print |
+			procedure |
+			quit |
+			random |
+			read |
+			readi |
+			repeat |
+			requirerange |
+			requirege |
+			require |
+			restore |
+			return |
+			save |
+			sdiff |
+			select |
+			subset |
+			then |
+			time |
+			to |
+			true |
+			try |
+			until |
+			vprintf |
+			vprint |
+			vtime |
+			when |
+			where |
+			while |
+			xor
+		</define-regex>
+	
 		<context id="keyword" style-ref="keyword">
 			<keyword>_</keyword>
 			<keyword>adj</keyword>
